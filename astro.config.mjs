@@ -9,6 +9,9 @@ import node from '@astrojs/node';
 export default defineConfig({
   integrations: [tailwind()],
   output: 'hybrid',
+  experimental: {
+    serverIslands: true,
+  },
   adapter: node({
     mode: 'standalone'
   })
